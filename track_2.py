@@ -162,14 +162,14 @@ def detect(opt):
     #st.session_state.controle = 'Controle...'
     #st.session_state.toneladas_passadas = 0 
 
-    url_control = 'http://sia:3000/backend/busca_generica/buscaGenerica?view=MGCLI.AGDTI_VW_DX_BALANCEAMENTO_PH'
+    url_control = 'http://***************************'
     dataset_mega = pd.read_json(url_control)
     tons_tot = dataset_mega['PESO_CONTROLE'][0]
     count = 0
     tons_tot_3 = dataset_mega['PESO_CONTROLE'][0]
 
 
-    url_percentual_MAF_inicial = 'http://sia:3000/backend/maf/percentuaisCalibre'
+    url_percentual_MAF_inicial = 'http://***************************'
     dataset_MAF_inicial = pd.read_json(url_percentual_MAF_inicial)
     controle_maf_inicial = dataset_MAF_inicial['CONTROLE_MEGA'][0]
 
@@ -309,7 +309,7 @@ def detect(opt):
 
             @retry (wait_fixed = 4000, stop_max_attempt_number = 4)
             def get_maf():
-                url_percentual_MAF = 'http://sia:3000/backend/maf/percentuaisCalibre'
+                url_percentual_MAF = 'http://***************************'
                 dataset_MAF = pd.read_json(url_percentual_MAF)
                 return dataset_MAF
 
@@ -626,8 +626,8 @@ def detect(opt):
             if (percent_passed > 47 and percent_passed < 51.5) and (dataset_MAF['QTD_FRUTOS_RECENTE'].sum() != 0):
 
                 import requests
-                TOKEN = "1730182387:AAEH3SPAeRjbOba3mDPS7A9K9J-rIdFj_Kg"
-                chat_id = "-678146203"
+                TOKEN = "****************************"
+                chat_id = "****************************"
 
                 a = controle_MAF
                 b = f'{percent_passed}% Processado !'
@@ -645,8 +645,8 @@ def detect(opt):
             if (percent_passed > 67 and percent_passed < 71) and (dataset_MAF['QTD_FRUTOS_RECENTE'].sum() != 0):
 
                 import requests
-                TOKEN = "1730182387:AAEH3SPAeRjbOba3mDPS7A9K9J-rIdFj_Kg"
-                chat_id = "-678146203"
+                TOKEN = "****************************"
+                chat_id = "****************************"
 
                 a = controle_MAF
                 b = f'{percent_passed}% Processado !'
@@ -664,8 +664,8 @@ def detect(opt):
             if (percent_passed > 85 and percent_passed < 90) and (dataset_MAF['QTD_FRUTOS_RECENTE'].sum() != 0) :
 
                 import requests
-                TOKEN = "1730182387:AAEH3SPAeRjbOba3mDPS7A9K9J-rIdFj_Kg"
-                chat_id = "-678146203"
+                TOKEN = "****************************"
+                chat_id = "****************************"
 
                 a = controle_MAF
                 b = f'{percent_passed}% Processado !'
@@ -682,8 +682,8 @@ def detect(opt):
             if (percent_passed >= 90 and percent_passed < 100) and (dataset_MAF['QTD_FRUTOS_RECENTE'].sum() != 0):
 
                 import requests
-                TOKEN = "1730182387:AAEH3SPAeRjbOba3mDPS7A9K9J-rIdFj_Kg"
-                chat_id = "-678146203"
+                TOKEN = "****************************"
+                chat_id = "****************************"
 
                 a = controle_MAF
                 b = f'{percent_passed}% Processado !'
@@ -699,7 +699,7 @@ def detect(opt):
 
             if percent_passed > 102:
 
-                url_control = 'http://sia:3000/backend/busca_generica/buscaGenerica?view=MGCLI.AGDTI_VW_DX_BALANCEAMENTO_PH'
+                url_control = 'http://***************************'
                 dataset_mega = pd.read_json(url_control)
                 tons_tot = dataset_mega['PESO_CONTROLE'][0]
 
@@ -791,14 +791,14 @@ def detect(opt):
                     conn.close() 
 
 
-                    url_control = 'http://sia:3000/backend/busca_generica/buscaGenerica?view=MGCLI.AGDTI_VW_DX_BALANCEAMENTO_PH'
+                    url_control = 'http://***************************'
                     dataset_mega = pd.read_json(url_control)
                     tons_tot = dataset_mega['PESO_CONTROLE'][0]
                     crtl_mega = dataset_mega['CONTROLE'][0]
                     vrdd_mega = dataset_mega['VARIEDADE'][0]
                     talhao_mega = dataset_mega['TALHAO'][0]
 
-                    url_percentual_MAF_inicial = 'http://sia:3000/backend/maf/percentuaisCalibre'
+                    url_percentual_MAF_inicial = 'http://***************************'
                     dataset_MAF_inicial = pd.read_json(url_percentual_MAF_inicial)
                     controle_maf_inicial = dataset_MAF_inicial['CONTROLE_MEGA'][0]        
                     mode = 'Markdown'
@@ -807,8 +807,8 @@ def detect(opt):
                     horario = time.localtime()
                     horario_convert = time.asctime(horario)
                     
-                    TOKEN = "1730182387:AAEH3SPAeRjbOba3mDPS7A9K9J-rIdFj_Kg"
-                    chat_id = "-678146203"
+                    TOKEN = "****************************"
+                    chat_id = "****************************"
 
                     
                     message = f"*Próximo controle (MEGA):* {crtl_mega} \n *Controle MAF atual:* {controle_maf_inicial} \n *Variedade:* {vrdd_mega} \n *Talhão:* {talhao_mega} \n *Data:* {horario_convert}"
@@ -1015,7 +1015,7 @@ def detect(opt):
                 vid_writer.write(im0)
             
 
-            #data2 = requests.get("http://177.52.21.58:3000/backend/maf/#percentuaisCalibre")
+      
             #json_data2 = data2.json()
             # dataset_MAF = pd.DataFrame.from_dict(json_data2)
                     
@@ -1026,13 +1026,13 @@ def detect(opt):
             if count_fly4 >= 1:
 
                 import requests
-                TOKEN = "1730182387:AAEH3SPAeRjbOba3mDPS7A9K9J-rIdFj_Kg"
-                chat_id = "-678146203"
+                TOKEN = "****************************"
+                chat_id = "****************************"
 
 
                 @retry (wait_fixed = 4000, stop_max_attempt_number = 4)
                 def get_maf():
-                    url_percentual_MAF = 'http://sia:3000/backend/maf/percentuaisCalibre'
+                    url_percentual_MAF = 'http://****************************'
                     dataset_MAF = pd.read_json(url_percentual_MAF)
                     return dataset_MAF
                 dataset_MAF = get_maf()
