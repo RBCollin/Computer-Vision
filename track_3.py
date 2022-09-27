@@ -153,13 +153,13 @@ def detect(opt):
     #st.session_state.controle = 'Controle...'
     #st.session_state.toneladas_passadas = 0 
 
-    url_control = 'http://sia:3000/backend/busca_generica/buscaGenerica?view=MGCLI.AGDTI_VW_DX_BALANCEAMENTO_PH'
+    url_control = 'http://***************************'
     dataset_mega = pd.read_json(url_control)
     tons_tot = dataset_mega['PESO_CONTROLE'][0]
     count = 0
 
 
-    url_percentual_MAF_inicial = 'http://sia:3000/backend/maf/percentuaisCalibre'
+    url_percentual_MAF_inicial = 'http://***************************'
     dataset_MAF_inicial = pd.read_json(url_percentual_MAF_inicial)
     controle_maf_inicial = dataset_MAF_inicial['CONTROLE_MEGA'][0]
 
@@ -291,7 +291,7 @@ def detect(opt):
             
             @retry (wait_fixed = 4000, stop_max_attempt_number = 4)
             def get_maf():
-                url_percentual_MAF = 'http://sia:3000/backend/maf/percentuaisCalibre'
+                url_percentual_MAF = 'http://***************************'
                 dataset_MAF = pd.read_json(url_percentual_MAF)
                 return dataset_MAF
 
@@ -635,11 +635,11 @@ def detect(opt):
                     conn.close() 
 
 
-                    url_control = 'http://sia:3000/backend/busca_generica/buscaGenerica?view=MGCLI.AGDTI_VW_DX_BALANCEAMENTO_PH'
+                    url_control = 'http://***************************'
                     dataset_mega = pd.read_json(url_control)
                     tons_tot = dataset_mega['PESO_CONTROLE'][0]
                     
-                    url_percentual_MAF_inicial = 'http://sia:3000/backend/maf/percentuaisCalibre'
+                    url_percentual_MAF_inicial = 'hhttp://***************************'
                     dataset_MAF_inicial = pd.read_json(url_percentual_MAF_inicial)
                     controle_maf_inicial = dataset_MAF_inicial['CONTROLE_MEGA'][0]        
 
